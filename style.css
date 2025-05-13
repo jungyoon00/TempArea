@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        padding-left: 50%;
+        position: relative;
+    }
+    td::before {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    td:nth-of-type(1)::before { content: "도시"; }
+    td:nth-of-type(2)::before { content: "기온 (°C)"; }
+    td:nth-of-type(3)::before { content: "날씨"; }
+    td:nth-of-type(4)::before { content: "날짜"; }
+}
