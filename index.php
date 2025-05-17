@@ -1,15 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "weatherdb";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli();
 if ($conn->connect_error) {
     die("연결 실패: " . $conn->connect_error);
 }
 
-$sql = "SELECT city, temperature, condition, date FROM weather";
+$sql = "";
 $result = $conn->query($sql);
 ?>
 
