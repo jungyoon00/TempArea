@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "게시글이 저장되었습니다.<br>";
 }
 
-// 게시글 보기 기능 (해당 부분에 취약점이 있음)
+// 게시글 보기 기능
 if (isset($_GET['post'])) {
     $filename = $_GET['post'];
     $output = shell_exec("cat posts/" . $filename . ".txt");
