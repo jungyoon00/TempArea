@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
         echo "<tr>
                 <td>{$row['city']}</td>
                 <td>{$row['temperature']}</td>
-                <td>{$row['condition']}</td>
+                <td>{$row['status']}</td>
                 <td>{$row['date']}</td>
               </tr>";
     }
